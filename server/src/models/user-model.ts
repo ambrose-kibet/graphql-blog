@@ -30,6 +30,7 @@ const userSchema: Schema<IUser, IUserModel, IUserMethods> = new Schema({
       validator: (v: string) => validator.isEmail(v),
       message: "Please provide a valid email",
     },
+    index: true,
   },
   password: {
     type: String,
